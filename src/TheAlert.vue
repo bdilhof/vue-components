@@ -25,7 +25,12 @@ export default {
       type: String,
       default: 'primary',
       validator: function (value) {
-        return ['primary', 'danger', 'success', 'warning'].indexOf(value) !== -1
+        return [
+          'primary',
+          'danger',
+          'success',
+          'warning'
+        ].indexOf(value) !== -1
       }
     },
     icon: {
