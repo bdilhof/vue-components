@@ -2,6 +2,7 @@
   "name": "@vermontdevelopment/vue-components",
   "version": "1.0.0",
   "description": "",
+  "main": "./index.js",
   "author": "Bruno Dilhof",
   "license": "ISC"
 }
