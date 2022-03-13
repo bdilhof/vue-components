@@ -3,7 +3,9 @@
     <h1>The Select</h1>
     <div>
       <h4>Selected ({{ Object.keys(selected).length }})</h4>
-      <pre>{{ this.selected }}</pre>
+      <div v-if="Object.keys(selected).length">
+        <span @click="unselect(index)" v-for="(item, index) in selected" :key="item.id" class="badge rounded-pill bg-success"><b>{{ index }}</b> <i>{{ item }}</i></span>
+      </div>
     </div>
     <div>
       <h4>Items ({{ Object.keys(items).length }})</h4>
@@ -47,6 +49,8 @@ export default {
 
       this.selected = {}
       this.selected = tempSelected
+
+      delete this.items[index]
     },
     unselect(index) {
 
