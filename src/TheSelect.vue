@@ -25,9 +25,11 @@ export default {
       type: Boolean,
       default: false
     },
-    initialItems: {
+    options: {
       type: Object,
-      default: {}
+      default: function() {
+        return {}
+      }
     },
   },
 
@@ -40,7 +42,11 @@ export default {
 
   methods: {
     select(index) {
+      let tempSelected = this.selected
+      tempSelected[index] = this.items[index]
 
+      this.selected = {}
+      this.selected = tempSelected
     },
     unselect(index) {
 
@@ -48,7 +54,7 @@ export default {
   },
 
   mounted() {
-    this.items = this.initialItems
+    this.items = this.options
   }
 }
 </script>
