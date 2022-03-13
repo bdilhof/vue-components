@@ -4,5 +4,8 @@
   "description": "",
   "main": "./index.js",
   "author": "Bruno Dilhof",
-  "license": "ISC"
+  "license": "ISC",
+  "peerDependencies": {
+    "vue": "^3.2.31"
+  }
 }
